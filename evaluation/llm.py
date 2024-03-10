@@ -82,8 +82,6 @@ class LLM(GenerationMixin):
             model.half()  # seems to fix bugs for some users.
 
         model.eval()
-        # if torch.__version__ >= "2" and sys.platform != "win32":
-        #     model = torch.compile(model)
         return tokenizer, model
 
     def __init__(
@@ -165,12 +163,6 @@ class LLM(GenerationMixin):
         ].to(device)
         output_ids = input_ids.tolist()[0]
         stop_token_ids = [self.tokenizer.eos_token_id]
-        # logits_processor = self._get_logits_processor(
-        #     generation_config=generation_config,
-        #     input_ids_seq_length=input_ids.shape[-1],
-        #     encoder_input_ids=input_ids,
-        #     prefix_allowed_tokens_fn=None
-        # )
         past_key_values = out = token = None
         generation_mode = self._get_generation_mode(generation_config, None)
         for i in range(generation_config.max_new_tokens):

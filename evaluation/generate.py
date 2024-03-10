@@ -9,8 +9,8 @@ from LLM import LLM
 
 from utils.prompter import PrompterGPT4Tools
 from helpers.ssl import no_ssl_verification
-from ToolLibrary.thirtytools_utils import load_thirty_tools
-from CodeRunner.runner import CodeRunner
+from .utils import load_thirty_tools
+from .coderunner import CodeRunner
 from ToolLibrary.utils import extract_code
 
 if torch.cuda.is_available():
