@@ -4,6 +4,8 @@ This is a benchmark and a instruction tuning data which aim to enhance and asses
 
 ### Benchmark
 
+The list of APIs used
+
 - Units conversion API https://github.com/hgrecco/pint
 
 - Geolocation API https://geocoder.readthedocs.io
@@ -12,7 +14,23 @@ This is a benchmark and a instruction tuning data which aim to enhance and asses
 
 - Nutrition analysis API https://api.edamam.com
 
+The data can be found in the ```data``` folder
 
+* ```original_data.json``` contains evaluation examples 
+
+* ```parameter_descriptions_data.json``` contains evaluation examples with detailed parameter descriptions
+
+* ```parameter_descriptions_and_usage_examples_data.json``` contains evaluation examples with detailed parameter descriptions and a single usage example
+
+
+### Evaluation
+
+To evaluate your model, please follow the [scripts/generate.sh](./scripts/generate.sh) 
+
+### Instruction data
+
+
+    
 
 
 
