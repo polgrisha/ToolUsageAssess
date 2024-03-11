@@ -29,7 +29,7 @@ To evaluate your model, please follow the [scripts/generate.sh](./scripts/genera
 
 ### Instruction data
 
-
+The dataset consits of 141 diverse tool and parameter descriptions. For each tool up to 23 examples of tool usage were generated. The data can be found in the 
     
 
 
